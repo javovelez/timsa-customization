@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': ".",
+    'name': "/home/javo/odoo13/cusmod13/timsa_customization/purchase_timsa/",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
