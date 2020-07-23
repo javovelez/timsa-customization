@@ -18,7 +18,7 @@
     'version': '13.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','project','account','sales','purchase','stock'],
+    'depends': ['base','project','account','sales','purchase','stock','hr_expense'],
 
     # always loaded
     'data': [
