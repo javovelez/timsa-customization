@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="main_company_certificate_alias" model="afipws.certificate_alias">
+        <field name="common_name">AFIPWSproductionTIMSA</field>
+        <field name="key">-----BEGIN RSA PRIVATE KEY-----
+MIIEpQIBAAKCAQEAzkTOxgI04kHp2R17rzDJT2SC/auGTWBScc6OMn9mYUdOR+pI
+sdy8x5tfnIJrPpJEwSM7iA4YaCxehb85rGR40IFEhrcux7xpwU9lbMx1DGQmB1Og
+9j3V9mFR5tYXGB66D9P2vAnybaufry0vS9FR5PFqKB4j6/2pU+VNIAkiP8JTeiwN
++BIut7tRnxq5g+fL9+Fylu18STc8aUcpE69xjC0eAwTcJJUUA/Ftr7iVEMssqBc5
+LQO68S0OCg0hpasKlq/QS4yr44FWdJES0g96ukbk1IaIcUZclepnB/ppOQHOomw6
+eziObpXIsjn1CmfqsMABjLes2VgPK+XKnXXvDwIDAQABAoIBAGvBnHfq3S+6GW1Y
+Lq4mAXTdYGUe/0la4ZccvkJ5NcXqF2YQaaupUmHAtKExrM8CYLK5MjdwjaWWUEb0
+0C9USZ07es4Z0nF754+aZ7T/1sIDa652LOeXBDjzPHMoMuZh3ve31vUDCUfr2b8N
+DuE/19WPnNKadE+rs5LlfnYW73J4pSqKPihe4hX/ncV+d7sGbpcMP43xJTmSWnEU
+3TN5gpM7bJNGoYg6smmWM3fkg+kAVD1riZNWV4sn37P0rmXVvflOIOE4xdJxvYDM
+RPhypvfUxvXVvkTpKZ8ykZY0WKxoppV7FXLUC2dyz4HKX9yhcQwRgJV+FvtjBXyn
+hIU4/KkCgYEA7Kol7v1iBBvdsZ44RTsmYE33Hy+NDoIaNd17abWH3OPr4ynylV4K
+n437V5E8q6XZTVW7P5Y8aEUI9i9QulrNbpW63xBnWFyiehj3NqQ/TKArffZ07KGK
+rBVNWllpq9xqGRIkGb6nGvy9UyFom+oK7CbDWZ7SHNqhFpAuIYIOWaUCgYEA3x7t
+v09pvANccvWdUUlreNPhDKjlGsgvj8na6MwDXD42PVzP7pEmubpw8gKy05SIHoWL
+AdRzsLm9MwF5EV32LHjco8VrIF+BgddYKpSZTwGEIVyIz5Jkyrj50mfUqhCL0Btk
+SbKmS8BmfZ8o/A55rfmRAg2YbFb2MUvI/8VSf6MCgYEAqKJMyVBPSTI589gTrHEL
+VU/4qIYPcqkN2BfrWlV5a9IUQRegvQH3e92FnM3md0CD6HEQLaz1ei7GxfTNBxyw
+iP2z3EIqAXJwa6Pic1Lxr73pf6XfhsVMtHWxWpGflFBIYXjltFp/Y+F3XgbOLVrF
+UaQFSpS6jsjSQ+uUk1fCtekCgYEAvYPVyTO4ybvJINRC5bKJGL5PX6NtxkvXKjj4
+Odhf2k/1XjWhYC/mRsd3+/gS0OhOni4sHkfIZIm/jL1pijjXSnr2Xhznmz3EEPdK
+qhBCD/tnsbaZdkYQWqi3eeI7nqAjQYairn6SBbHM3FL+Suo4rG9YnffSSeOrhb+r
+YKTIKCUCgYEAnjUWxREj8rdcxAVq0dTwqTlSxd8XAlF2tjAy0Rcn3VtlbpuXM5Hb
+dKvVTPZUMqpiyv6LNT+7hSDltkKXNhTwvqoHnblTVgVMTTG/lZvC5BhsQpxIV7kX
+Cp/nVpwEJ2r8+76mtynHqcIdF9N2ES8N25YHgR5PXTK6U1BIRQchLgQ=
+-----END RSA PRIVATE KEY-----</field>
+        <field name="company_id" ref="l10n_ar.company_ri"/>
+        <field name="country_id" ref="base.ar"/>
+        <!-- <field name="state_id" ref="l10n_ar_account.demo_S"/> -->
+        <field name="city">Mendoza</field>
+        <!-- <field name="service_provider_cuit">20080721281</field>-->
+        <!--field name="service_type">outsourced</field> -->
+        <field name="company_cuit">30566429191</field>
+        <field name="service_type">in_house</field> 
+        <field name="type">Producción</field>
+        <field name="state">confirmed</field>
+    </record>
+
+    <record id="main_company_certificate" model="afipws.certificate">
+        <field name="alias_id" ref="main_company_certificate_alias"/>
+        <field name="state">confirmed</field>
+        <field name="csr">-----BEGIN CERTIFICATE REQUEST-----
+MIICkDCCAXgCAQAwSzELMAkGA1UEBhMCQVIxDjAMBgNVBAoMBVRJTVNBMREwDwYD
+VQQDDAhTSVNURU1BUzEZMBcGA1UEBRMQQ1VJVCAzMDU2NjQyOTE5MTCCASIwDQYJ
+KoZIhvcNAQEBBQADggEPADCCAQoCggEBAM5EzsYCNOJB6dkde68wyU9kgv2rhk1g
+UnHOjjJ/ZmFHTkfqSLHcvMebX5yCaz6SRMEjO4gOGGgsXoW/OaxkeNCBRIa3Lse8
+acFPZWzMdQxkJgdToPY91fZhUebWFxgeug/T9rwJ8m2rn68tL0vRUeTxaigeI+v9
+qVPlTSAJIj/CU3osDfgSLre7UZ8auYPny/fhcpbtfEk3PGlHKROvcYwtHgME3CSV
+FAPxba+4lRDLLKgXOS0DuvEtDgoNIaWrCpav0EuMq+OBVnSREtIPerpG5NSGiHFG
+XJXqZwf6aTkBzqJsOns4jm6VyLI59Qpn6rDAAYy3rNlYDyvlyp117w8CAwEAAaAA
+MA0GCSqGSIb3DQEBCwUAA4IBAQBfmRlr21lTMwzIgP9ZdxixkL+D/iYZqa0XBrlm
+GXxO60e2a3qd/wTBD+2Ll0bcdMNQ+513XaXIRT0Krot/fO7mZ/VYPREzrEZOy9Qz
+idQuavaLcIFLrQq0L0AP5SBAFDiTEkDRCsoRdY0ii4Poo3t4JrwJVXc0cw3Ma0LN
+VdeAlndIqXTxbEJFTsfQVovt2OpMoHUBbc1VGD4cW+orZ7Au9tu8HREgca/yiS92
+biWvH+/7g7YOMzVQ+iUcJjxO1Z9f3ZwXSzeitiOI211oxg4/tZksypTeEdU3Ok/x
+3+ztIaVI0PrLIFaJQfp8Z+LcqY5Qx/Mkh9l8eYFFd1A9AAC6
+-----END CERTIFICATE REQUEST-----</field>
+        <field name="crt">-----BEGIN CERTIFICATE-----
+MIIDQDCCAiigAwIBAgIIMo+zo1HEzPswDQYJKoZIhvcNAQENBQAwMzEVMBMGA1UEAwwMQ29tcHV0
+YWRvcmVzMQ0wCwYDVQQKDARBRklQMQswCQYDVQQGEwJBUjAeFw0xOTA5MTgyMTQ3NDVaFw0yMTA5
+MTcyMTQ3NDVaMCsxDjAMBgNVBAMMBW9kb28xMRkwFwYDVQQFExBDVUlUIDMwNTY2NDI5MTkxMIIB
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzkTOxgI04kHp2R17rzDJT2SC/auGTWBScc6O
+Mn9mYUdOR+pIsdy8x5tfnIJrPpJEwSM7iA4YaCxehb85rGR40IFEhrcux7xpwU9lbMx1DGQmB1Og
+9j3V9mFR5tYXGB66D9P2vAnybaufry0vS9FR5PFqKB4j6/2pU+VNIAkiP8JTeiwN+BIut7tRnxq5
+g+fL9+Fylu18STc8aUcpE69xjC0eAwTcJJUUA/Ftr7iVEMssqBc5LQO68S0OCg0hpasKlq/QS4yr
+44FWdJES0g96ukbk1IaIcUZclepnB/ppOQHOomw6eziObpXIsjn1CmfqsMABjLes2VgPK+XKnXXv
+DwIDAQABo2AwXjAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFFtAUTDnwyq2nFack4XjQoCwUOv2
+MB0GA1UdDgQWBBSSM2HHRgdbWLEmhjyjWP/pmY5ZGjAOBgNVHQ8BAf8EBAMCBeAwDQYJKoZIhvcN
+AQENBQADggEBAALiZPJYYI6tGvM2Taw3Jf62KvFywV6ZFTu6pFDb51T13bRJ3XkQZ81wAVA4mXNG
+DOZn/6AcYIqEZEUA8WRS+icJmOALLIIis6j3wNu7BlDkQ9hImQp+4mY8mvLh7o8+Z9sYpOa0O2FQ
+YlkNVFz7CxF66cxgRXmOVfjAUJZP84QP5lRJh6z63+ryq9qEtmZw416/sXffHs9ystEzg4Em0smw
+xj5b9yEb0RqlL0Wwjc9yGPH9yCt7TQa45XNJS8Y7/QrW+mkRy0Q7WZOW+VbXJb58UVVmFXs1M/g7
+K6AMN4PewS1SZLHPefsI4y7uxHCzi9y4AuRrPVhbnK+E3xlCzHU=
+-----END CERTIFICATE-----</field>
+    </record>
+</odoo>
