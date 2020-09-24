@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "timsa_init",
+    'name': "timsa_homologation",
 
     'summary': """
        Parametrización de TIMSA""",
@@ -23,8 +23,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'data/timsa_data.xml',
+        'data/cuit.xml',
+        'data/cartificate_homo.xml'
+        'data/parameter_homo.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

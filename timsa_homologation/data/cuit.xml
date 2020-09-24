@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="partner_ri" model="res.partner">
+        <field name='vat'>30111111118</field>
+    </record>
+
+</odoo>

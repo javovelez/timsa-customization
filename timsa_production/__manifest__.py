@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "timsa_init",
+    'name': "timsa_production",
 
     'summary': """
        Parametrización de TIMSA""",
@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'data/timsa_data.xml',
+        #'data/timsa_data.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

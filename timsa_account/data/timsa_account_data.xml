@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="base.main_partner" model="res.partner">
+            <field name='name'>Técnica Industrial Minera S.A.</field>
+            <field name='l10n_ar_afip_responsibility_type_id' ref="l10n_ar.res_IVARI"/>
+            <field name='l10n_latam_identification_type_id' ref="l10n_ar.it_cuit"/>
+            <field name='vat'>30566429191</field>
+            <field name="street">Montevideo 729</field>
+            <field name="city">Mendoza</field>
+            <field name="country_id" ref="base.ar"/>
+            <field name="state_id" ref="base.state_ar_m"/>
+            <field name="zip">5500</field>
+            <field name="phone">+54 261 4204041</field>
+            <field name="email">proyectos@timsasa.com</field>
+            <field name="website">www.timsasa.com</field>
+        </record>
+           
+        <record id="base.main_company" model="res.company">
+            <field name='currency_id' ref='base.ARS'/>
+            <!--field name='partner_id' ref='base.main_partner'/-->  
+            <!--field name='name'>Técnica Industrial Minera S.A.</field-->
+            <field name="l10n_ar_afip_start_date" eval="time.strftime('1973-07-04')"/>
+            <field name='l10n_ar_gross_income_type'>multilateral</field>
+            <field name='l10n_ar_gross_income_number'>913-505030</field>
+           <!-- <field name='gross_income_jurisdiction_ids'>Mend<field/> -->
+        </record>
+
+        <function model="account.chart.template" name="try_loading">
+            <value eval="[ref('l10n_ar.l10nar_ri_chart_template')]"/>
+            <value model="res.company" eval="obj().env.ref('base.main_company')"/>
+        </function>
+
+        <record id="bank_account_ri" model="res.partner.bank">
+            <field name="acc_number">0720068720000000242190</field>
+            <field name="partner_id" ref="base.main_partner"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+</odoo>
