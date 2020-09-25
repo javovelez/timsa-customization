@@ -22,7 +22,16 @@
             <field name="l10n_ar_afip_start_date" eval="time.strftime('1973-07-04')"/>
             <field name='l10n_ar_gross_income_type'>multilateral</field>
             <field name='l10n_ar_gross_income_number'>913-505030</field>
-           <!-- <field name='gross_income_jurisdiction_ids'>Mend<field/> -->
+            <field name='gross_income_jurisdiction_ids' eval="[(6, 0, [ref('base.state_ar_x'),
+                                                    ref('base.state_ar_b'),
+                                                    ref('base.state_ar_y'),
+                                                    ref('base.state_ar_l'),
+                                                    ref('base.state_ar_q'),
+                                                    ref('base.state_ar_a'),
+                                                    ref('base.state_ar_j'),
+                                                    ref('base.state_ar_d'),
+                                                    ref('base.state_ar_z'),
+                                                    ref('base.state_ar_t')])]"/> 
         </record>
 
         <function model="account.chart.template" name="try_loading">
