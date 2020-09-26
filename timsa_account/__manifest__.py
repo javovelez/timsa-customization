@@ -25,6 +25,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'data/timsa_company_data.xml',
+        'data/timsa_pos.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

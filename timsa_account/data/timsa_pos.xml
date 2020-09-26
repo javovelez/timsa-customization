@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_journal_PV6" model="account.journal">
+        <field name='name'>Punto de Venta 6 FE</field>
+        <field name='company_id' ref="base.main_company"/>
+        <field name='type'>sale</field>
+        <field name='l10n_ar_afip_pos_system'>RAW_MAW</field>
+        <field name='code'>PV6</field>
+        <field name='l10n_latam_use_documents' eval="True"/>
+        <field name='l10n_ar_afip_pos_number'>6</field>
+        <field name='l10n_ar_afip_pos_partner_id' ref="base.main_partner"/>
+        <!--
+            RAW_MAW Electronic Invoice - Web Service
+            BFEWS', _('Electronic Fiscal Bond - Web Service'
+            FEEWS', _('Export Voucher - Web Service')))
+        ('II_IM', _('Pre-printed Invoice')),
+        ('RLI_RLM', _('Online Invoice')),
+        ('BFERCEL', _('Electronic Fiscal Bond - Online Invoice')),
+        ('FEERCELP', _('Export Voucher - Billing Plus')),
+        ('FEERCEL', _('Export Voucher - Online Invoice')),
+        ('CPERCEL', _('Product Coding - Online Voucher')),
+        -->
+        <field name='l10n_ar_share_sequences' eval="True"/>
+        <field name='refund_sequence' eval="False"/>
+    </record>
+
+    <record id="sale_journal_PV3" model="account.journal">
+        <field name='company_id' ref="base.main_company"/>
+        <field name='name'>Punto de Venta 3 online</field>
+        <field name='type'>sale</field>
+        <field name='code'>PV3</field>
+        <field name='l10n_latam_use_documents' eval="True"/>
+        <field name='l10n_ar_afip_pos_number'>3</field>
+        <field name='l10n_ar_afip_pos_partner_id' ref="base.main_partner"/>
+        <field name='l10n_ar_afip_pos_system'>RLI_RLM</field>
+        <field name='refund_sequence' eval="False"/>
+    </record>
+</odoo>

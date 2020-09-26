@@ -44,5 +44,12 @@
             <field name="partner_id" ref="base.main_partner"/>
             <field name="company_id" ref="base.main_company"/>
         </record>
+        <!-- Esto lo comento ya que da un error que no entiendo insert or update on table "res_groups_users_rel" violates foreign key constraint "res_groups_users_rel_uid_fkey
+        <record id="account.group_account_user" model="res.groups"> 
+            <field name="users"  eval="[(4,0,[ref('base.user_admin')])]"/>
+
+        </record>
+
+        -->
 
 </odoo>
