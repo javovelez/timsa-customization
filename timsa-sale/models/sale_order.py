@@ -2,7 +2,7 @@ from odoo import fields, models
 
 class saleOrdertimsa(models.Model):
 
-    _inherit = ['sale.order']
+    _inherit = "sale.order"
     certificate_name = fields.Char(string='Nombre', required=True)
     oc_code = fields.Char(string='OC')
     bpm_code = fields.Char(string='Código BPM', required=False)
