@@ -23,6 +23,7 @@
 
     # always loaded
     'data': [
+        'views/timsa_sale_form_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
