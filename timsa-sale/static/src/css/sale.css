@@ -1,0 +1,12 @@
+.o_form_sale_order.o_form_editable .oe_title {
+  max-width: initial;
+}
+
+.o_form_sale_order.o_form_editable .oe_title .o_sale_order_name {
+  /*
+   * should be (coming from addons/web/static/src/scss/form_view.scss):
+   * max-width: map-get($container-max-widths, md) - (2 * $o-horizontal-padding);
+   */
+  max-width: 688px;
+  margin-right: auto;
+}
