@@ -8,10 +8,15 @@
                 <attribute name="invisible">1</attribute>  
             </button>       
             <field name="name"  position="after"> 
-                <field name="certificate_name" />       <!-- style="width:200%"-->
+                <field name="certificate_name" placeholder="Nombre del certificado" />  <!-- style="width:200%"-->
+                <field name="ruta" placeholder="Ruta al certificado"/>
             </field>
             <field name="partner_id"  position="attributes"> 
                 <attribute name='context'>{'res_partner_search_mode': 'customer', 'show_address': 0, 'show_vat': False}</attribute>  
+            </field>
+
+            <field name="validity_date" position="after">
+                <field name="analytic_account_id" context="{'default_partner_id':partner_invoice_id, 'default_name':name}" attrs="{'readonly': [('invoice_count','!=',0),('state','=','sale')]}" groups="analytic.group_analytic_accounting" force_save="1"/>
             </field>
 
             <field name="validity_date" position="attributes">
@@ -49,88 +54,7 @@
             <page string="Optional Products" position="attributes">
                 <attribute name="invisible">True</attribute>
             </page>
-            <!-- <xpath expr="//page/field[@name='order_line']/.." position="after">
-                <page string="Certificados subcontratistas" name="sub_contractors_purchase" attrs="{'invisible': [('state', 'not in', ['draft', 'sent'])]}">
-                    <field name="sale_order_option_ids" mode="tree,form,kanban">
-                        <form string="Optional Products">
-                            <group>
-                                <field name="product_id" domain="[('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
-                                <field name="name"/>
-                                <field name="quantity"/>
-                                <field name="product_uom_category_id" invisible="1"/>
-                                <field name="uom_id" groups="uom.group_uom"/>
-                                <field name="price_unit"/>
-                                <field name="discount" groups="product.group_discount_per_so_line"/>
-                                <field name="is_present" />
-                            </group>
-                        </form>
-                        <kanban class="o_kanban_mobile">
-                            <field name="product_id"/>
-                            <field name="quantity"/>
-                            <field name="uom_id" groups="uom.group_uom"/>
-                            <field name="price_unit"/>
-                            <field name="is_present" />
-                            <templates>
-                                <t t-name="kanban-box">
-                                    <div class="oe_kanban_card oe_kanban_global_click">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <strong>
-                                                    <span>
-                                                        <t t-esc="record.product_id.value"/>
-                                                    </span>
-                                                </strong>
-                                            </div>
-                                            <div class="col-2">
-                                                <button name="button_add_to_order" class="btn btn-link oe_link fa fa-shopping-cart" title="Add to order lines" type="object" attrs="{'invisible': [('is_present', '=', True)]}"/>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 text-muted">
-                                                <span>
-                                                    Quantity:
-                                                    <t t-esc="record.quantity.value"/>
-                                                    <t t-esc="record.uom_id.value"/>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12 text-muted">
-                                                <span>
-                                                    Unit Price:
-                                                    <t t-esc="record.price_unit.value"/>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </t>
-                            </templates>
-                        </kanban>
-                        <tree string="Sales Quotation Template Lines" editable="bottom" decoration-success="is_present == True">
-                            <control>
-                                <create name="add_product_control" string="Add a product"/>
-                            </control>
-                            <field name="sequence" widget="handle"/>
-                            <field name="product_id" domain="[('sale_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
-                            <field name="name" optional="show"/>
-                            <field name="quantity"/>
-                            <field name="uom_id" string="UoM" groups="uom.group_uom" optional="show"/>
-                            <field name="product_uom_category_id" invisible="1"/>
-                            <field name="price_unit"/>
-                            <field name="discount" string="Disc.%" groups="product.group_discount_per_so_line" optional="show"/>
-                            <field name="is_present" invisible="1" />
-                            <button name="button_add_to_order" class="oe_link" icon="fa-shopping-cart" title="Add to order lines" type="object" attrs="{'invisible': [('is_present', '=', True)]}"/>
-                        </tree>
-                    </field>
-                </page>
-            </xpath>-->
-                
-            <!--  <field name="partner_shipping_id" position="attributes">
-                 <attribute name="invisible">1</attribute>                 
-            </field>
-            <field name="partner_shipping_id" position="attributes">
-                 <attribute name="invisible">1</attribute>                 
-            </field>-->
+           
         </field >
     </record>
 </odoo>

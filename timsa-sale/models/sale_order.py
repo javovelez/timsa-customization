@@ -6,7 +6,7 @@ class saleOrdertimsa(models.Model):
     certificate_name = fields.Char(string='Nombre', required=True)
     oc_code = fields.Char(string='OC')
     code = fields.Char(string='Código', required=False)
-    ruta = fields.Text(string='Ruta a certificado')
+    ruta = fields.Char(string='Ruta certificado')
     
 
     
