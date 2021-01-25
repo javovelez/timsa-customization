@@ -8,8 +8,8 @@
                 <attribute name="invisible">1</attribute>  
             </button>       
             <field name="name"  position="after"> 
-                <field name="certificate_name" placeholder="Nombre del certificado" />  <!-- style="width:200%"-->
-                <field name="ruta" placeholder="Ruta al certificado"/> <!-- style="width:200%"-->
+                <field name="certificate_name" placeholder="Nombre del certificado" style="max-width:688px;margin-right: auto"  />  <!-- style="width:200%"-->
+                <field name="ruta" placeholder="Ruta al certificado" style="max-width:688px;margin-right: auto;font-weight:400;font-size:15px"/> <!-- style="width:200%"-->
             </field>
             <field name="partner_id"  position="attributes"> 
                 <attribute name='context'>{'res_partner_search_mode': 'customer', 'show_address': 0, 'show_vat': False}</attribute>  
@@ -47,14 +47,17 @@
             <field name="partner_id"  position="after">
                 <field name="oc_code"/>
                 <field name="code" placeholder="Nº BPM o TK control"/>
-            </field> 
-            <page string="Other Info" position="attributes">
+            </field>
+            <xpath expr="//page[2]" position="attributes">
                 <attribute name="invisible">True</attribute>
-            </page>
-            <page string="Optional Products" position="attributes">
+            </xpath> 
+            <xpath expr="//page[3]" position="attributes">
                 <attribute name="invisible">True</attribute>
-            </page>
-           
+            </xpath>
         </field >
+    </record>
+    
+
+        </field>
     </record>
 </odoo>
